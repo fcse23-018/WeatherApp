@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WeatherApp - Explore interactive weather maps">
+  <title>WeatherApp - Maps</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body class="theme-light">
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-item">Current</a>
+      <a href="forecast.html" class="nav-item">Forecast</a>
+      <a href="maps.html" class="nav-item active" aria-current="page">Maps</a>
+      <a href="settings.html" class="nav-item">Settings</a>
+      <a href="about.html" class="nav-item">About</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="u-text-center">Weather Maps</h1>
+    <section class="card map-card" aria-label="Interactive weather map">
+      <p>Explore precipitation and weather patterns on an interactive map.</p>
+      <iframe id="map" class="map" src="" title="Weather map" aria-label="Interactive precipitation map"></iframe>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

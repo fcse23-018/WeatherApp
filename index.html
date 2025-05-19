@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WeatherApp - Check real-time weather for your location">
+  <title>WeatherApp - Current Weather</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body class="theme-light">
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-item active" aria-current="page">Current</a>
+      <a href="forecast.html" class="nav-item">Forecast</a>
+      <a href="maps.html" class="nav-item">Maps</a>
+      <a href="settings.html" class="nav-item">Settings</a>
+      <a href="about.html" class="nav-item">About</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="u-text-center">Current Weather</h1>
+    <section class="card weather-card" aria-label="Current weather conditions">
+      <div class="loading" role="status" aria-live="polite">Fetching current weather...</div>
+      <div class="weather-content hidden">
+        <h2 id="city-name" aria-label="City name"></h2>
+        <img id="weather-icon" src="" alt="Weather icon" class="weather-icon">
+        <p id="temperature" aria-label="Current temperature"></p>
+        <p id="description" aria-label="Weather description"></p>
+        <p id="humidity" aria-label="Humidity level"></p>
+        <p id="wind" aria-label="Wind speed"></p>
+      </div>
+      <div class="error hidden" role="alert"></div>
+    </section>
+    <section class="card search-section">
+      <p>Enter a city or ZIP code, or use voice search to check the weather.</p>
+      <form id="search-form" role="search">
+        <input type="text" id="location-input" placeholder="City or ZIP code" aria-label="Search location" class="input">
+        <button type="button" id="voice-search" class="btn btn-primary" aria-label="Voice search">
+          <svg width="24" height="24"><path d="M12 3v10a4 4 0 0 0 8 0V3a4 4 0 0 0-8 0z"></path></svg>
+        </button>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <button id="unit-toggle" class="btn btn-secondary" aria-label="Toggle temperature unit">°C / °F</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

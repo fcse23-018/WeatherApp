@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WeatherApp - View 7-day and hourly weather forecasts">
+  <title>WeatherApp - Forecast</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body class="theme-light">
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-item">Current</a>
+      <a href="forecast.html" class="nav-item active" aria-current="page">Forecast</a>
+      <a href="maps.html" class="nav-item">Maps</a>
+      <a href="settings.html" class="nav-item">Settings</a>
+      <a href="about.html" class="nav-item">About</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="u-text-center">Weather Forecast</h1>
+    <section class="card forecast-card" aria-label="Weather forecast">
+      <p>View daily or hourly weather forecasts for your location.</p>
+      <div class="tabs">
+        <button class="tab active" data-tab="daily" aria-label="Daily forecast">Daily</button>
+        <button class="tab" data-tab="hourly" aria-label="Hourly forecast">Hourly</button>
+      </div>
+      <div class="loading" role="status" aria-live="polite">Fetching forecast...</div>
+      <div class="forecast-content hidden" id="daily-forecast" aria-label="Daily weather forecast"></div>
+      <div class="forecast-content hidden" id="hourly-forecast" aria-label="Hourly weather forecast"></div>
+      <div class="error hidden" role="alert"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

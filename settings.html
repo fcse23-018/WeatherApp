@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WeatherApp - Customize your weather experience">
+  <title>WeatherApp - Settings</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body class="theme-light">
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav-item">Current</a>
+      <a href="forecast.html" class="nav-item">Forecast</a>
+      <a href="maps.html" class="nav-item">Maps</a>
+      <a href="settings.html" class="nav-item active" aria-current="page">Settings</a>
+      <a href="about.html" class="nav-item">About</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="u-text-center">Settings</h1>
+    <section class="card settings-card" aria-label="App settings">
+      <p>Customize your default location, temperature unit, and theme.</p>
+      <form id="settings-form">
+        <label for="default-location">Default Location</label>
+        <input type="text" id="default-location" placeholder="Enter city or ZIP code" aria-label="Default location">
+        <label for="unit">Temperature Unit</label>
+        <select id="unit" aria-label="Temperature unit">
+          <option value="metric">Celsius</option>
+          <option value="imperial">Fahrenheit</option>
+        </select>
+        <label for="theme">Theme</label>
+        <select id="theme" aria-label="Theme selection">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Save Settings</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
